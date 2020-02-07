@@ -34,7 +34,7 @@ namespace LibAPNG
             uint newCrc;
             using (var msCrc = new MemoryStream())
             {
-                msCrc.WriteBytes(new[] {(byte)'I', (byte)'D', (byte)'A', (byte)'T'});
+                msCrc.WriteBytes(new[] { (byte)'I', (byte)'D', (byte)'A', (byte)'T' });
                 msCrc.WriteBytes(FrameData);
 
                 newCrc = CrcHelper.Calculate(msCrc.ToArray());
@@ -43,7 +43,7 @@ namespace LibAPNG
             using (var ms = new MemoryStream())
             {
                 ms.WriteUInt32(Helper.ConvertEndian(Length - 4));
-                ms.WriteBytes(new[] {(byte)'I', (byte)'D', (byte)'A', (byte)'T'});
+                ms.WriteBytes(new[] { (byte)'I', (byte)'D', (byte)'A', (byte)'T' });
                 ms.WriteBytes(FrameData);
                 ms.WriteUInt32(Helper.ConvertEndian(newCrc));
                 ms.Position = 0;

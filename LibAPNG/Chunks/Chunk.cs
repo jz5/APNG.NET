@@ -78,9 +78,9 @@ namespace LibAPNG
         /// <summary>
         ///     Modify the ChunkData part.
         /// </summary>
-        public void ModifyChunkData(int postion, byte[] newData)
+        public void ModifyChunkData(int position, byte[] newData)
         {
-            Array.Copy(newData, 0, ChunkData, postion, newData.Length);
+            Array.Copy(newData, 0, ChunkData, position, newData.Length);
 
             using (var msCrc = new MemoryStream())
             {
@@ -94,9 +94,9 @@ namespace LibAPNG
         /// <summary>
         ///     Modify the ChunkData part.
         /// </summary>
-        public void ModifyChunkData(int postion, uint newData)
+        public void ModifyChunkData(int position, uint newData)
         {
-            ModifyChunkData(postion, BitConverter.GetBytes(newData));
+            ModifyChunkData(position, BitConverter.GetBytes(newData));
         }
 
         protected virtual void ParseData(MemoryStream ms)

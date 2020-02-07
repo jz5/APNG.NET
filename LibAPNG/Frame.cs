@@ -8,7 +8,7 @@ namespace LibAPNG
     /// </summary>
     public class Frame
     {
-        public static byte[] Signature = {0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A};
+        public static byte[] Signature = { 0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A };
 
         private List<IDATChunk> idatChunks = new List<IDATChunk>();
         private List<OtherChunk> otherChunks = new List<OtherChunk>();

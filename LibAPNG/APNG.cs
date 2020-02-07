@@ -44,7 +44,6 @@ namespace LibAPNG
                 {
                     case "IHDR":
                         throw new Exception("Only single IHDR is allowed.");
-                        break;
 
                     case "acTL":
                         if (IsSimplePNG)
@@ -80,12 +79,12 @@ namespace LibAPNG
                             if (frame != null)
                                 frames.Add(frame);
                             frame = new Frame
-                                    {
-                                        IHDRChunk = IHDRChunk,
-                                        fcTLChunk = new fcTLChunk(chunk)
-                                    };
+                            {
+                                IHDRChunk = IHDRChunk,
+                                fcTLChunk = new fcTLChunk(chunk)
+                            };
                         }
-                            // Otherwise this fcTL is used by the DEFAULT IMAGE.
+                        // Otherwise this fcTL is used by the DEFAULT IMAGE.
                         else
                         {
                             defaultImage.fcTLChunk = new fcTLChunk(chunk);
