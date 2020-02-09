@@ -1,6 +1,6 @@
 # APNG.NET
 
-*A fully-managed APNG Parser*
+*A fully-managed APNG (Animated Portable Network Graphics) Parser*
 
 
 **Original is https://github.com/xupefei/APNG.NET**
